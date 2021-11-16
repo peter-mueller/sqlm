@@ -36,5 +36,12 @@ func main() {
 	)
 
 	query := fmt.Sprintf("SELECT %s FROM CATS", fields)
+	// ca.: query, dests := sqlm.Format(
+	//	"SELECT %r FROM CATS", 
+	//	Fields(
+	//		Field{"NAME", &data.name},
+	//		Field{"SURNAME", &data.surname},
+	//	),
+	// )
 	fmt.Println(query, destinations)
 }
